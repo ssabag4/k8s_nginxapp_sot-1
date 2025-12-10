@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginxdep
-  namespace: fluxcdtutorial
+  namespace: fluxcd-play
   labels:
     name: nginx-deploy
 spec:
   selector:
     matchLabels:
       app: nginxpod
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:

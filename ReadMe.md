@@ -14,7 +14,7 @@ flux bootstrap github \
 
 # Define source SOT
 flux create source git k8s_nginxapp_sot \
- --url=https://github.com/biraderomkar/k8s_nginxapp_sot.git \
+ --url=https://github.com/ssabag4/k8s_nginxapp_sot.git \
  --branch=main \
  --interval=30s \
  --export > ./deploy/flux_source.yaml
@@ -27,6 +27,9 @@ flux create source git k8s_nginxapp_sot \
  --validation=client \
  --interval=30s  \
  --export > ./deploy/flux_sync.yaml
+
+
+ 
 
  # Setup Sealed Secret Controller
  wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.18.1/controller.yaml
